@@ -1,0 +1,20 @@
+body {
+    padding:55px;
+    /* background-image:  url("./background.jpg"); */
+    margin:35px;
+    /* color:white; */
+    font-size:32px;
+}
+#favicon{
+    align-content: center;
+    width:25px;
+    height:25px;
+}
+#page-container{
+    background:rgba(255, 255, 255, 0.164);
+     
+     height: 95vh;
+}
+#navbar {
+    align-content: center;
+}
