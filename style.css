@@ -1,20 +1,118 @@
-body {
-    padding:55px;
-    /* background-image:  url("./background.jpg"); */
-    margin:35px;
-    /* color:white; */
+* {
+    color:rgb(160, 24, 108);
+    font-family: 'Happy Monkey','Montserrat', sans-serif;
+}
+   /* .content-wrapper{
+
+    background:rgba(255, 255, 255, 0.164);} */
+
+
+
+    body { 
+    padding:10px;
+   background-color: #0d0d0a;
+    margin:5px;
+     /* color:white;  */
     font-size:32px;
 }
-#favicon{
+ #favicon{
+    font-size: "70px";
     align-content: center;
-    width:25px;
-    height:25px;
+    position:relative;
+    width:35px;
+    height:35px;
 }
 #page-container{
-    background:rgba(255, 255, 255, 0.164);
-     
+    /* background:rgba(255, 255, 255, 0.164); */
+      background-image:  url("./background.jpg");
      height: 95vh;
+}
+#mainsrch{
+    font-size: 79px;
+    color:rgba(68, 185, 39, 0.938);
 }
 #navbar {
     align-content: center;
 }
+span{
+    position: absolute;
+}
+.button{text-decoration:none; text-align:center; 
+    padding:0px 25px; 
+    border:solid 1px #005072; 
+     
+    font:18px "Trebuchet MS", Arial, Helvetica, sans-serif; 
+    font-weight:bold; 
+    color:#48237d; 
+    background-color:#fcfcfc; 
+    background-image: -moz-linear-gradient(top, #fcfcfc 0%, #ffffff 100%); 
+    background-image: -webkit-linear-gradient(top, #fcfcfc 0%, #ffffff 100%); 
+    background-image: -o-linear-gradient(top, #fcfcfc 0%, #ffffff 100%); 
+    background-image: -ms-linear-gradient(top, #fcfcfc 0% ,#ffffff 100%); 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=0 ); 
+    background-image: linear-gradient(top, #fcfcfc 0% ,#ffffff 100%);   
+    -webkit-box-shadow:0px 0px 2px #bababa, inset 0px 0px -2px #ffffff; 
+    -moz-box-shadow: 0px 0px 2px #bababa,  inset 0px 0px -2px #ffffff;  
+    box-shadow:0px 0px 2px #bababa, inset 0px 0px -2px #ffffff;  
+     
+      -webkit-transition: all 0.55s ease-in-out;
+    -moz-transition:  all 0.55s ease-in-out;
+    -o-transition:  all 0.55s ease-in-out;
+    transition:  all 0.55s ease-in-out;}.button:hover{
+    padding:0px 25px; 
+    border:none; 
+     
+    font:18px "Trebuchet MS", Arial, Helvetica, sans-serif; 
+    font-weight:bold; 
+    color:#48237d; 
+    background-color:#fcfcfc; 
+    background-image: -moz-linear-gradient(top, #fcfcfc 0%, #ffffff 100%); 
+    background-image: -webkit-linear-gradient(top, #fcfcfc 0%, #ffffff 100%); 
+    background-image: -o-linear-gradient(top, #fcfcfc 0%, #ffffff 100%); 
+    background-image: -ms-linear-gradient(top, #fcfcfc 0% ,#ffffff 100%); 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff',GradientType=0 ); 
+    background-image: linear-gradient(top, #fcfcfc 0% ,#ffffff 100%);   
+    -webkit-box-shadow:0px 0px 2px #bababa, inset 0px 0px -2px #ffffff; 
+    -moz-box-shadow: 0px 0px 2px #bababa,  inset 0px 0px -2px #ffffff;  
+    box-shadow:0px 0px 2px #bababa, inset 0px 0px -2px #ffffff;  
+    opacity:0.31; 
+    -ms-filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=31); 
+    filter: alpha(opacity=31); 
+    }.button:active{
+    padding:0px 25px; 
+    border:solid 5px #8ba300; 
+     
+    font:18px "Trebuchet MS", Arial, Helvetica, sans-serif; 
+    font-weight:bold; 
+    color:#7d781f; 
+    background-color:#fcfcfc; 
+    background-image: -moz-linear-gradient(top, #fcfcfc 0%, #f0f0f0 100%); 
+    background-image: -webkit-linear-gradient(top, #fcfcfc 0%, #f0f0f0 100%); 
+    background-image: -o-linear-gradient(top, #fcfcfc 0%, #f0f0f0 100%); 
+    background-image: -ms-linear-gradient(top, #fcfcfc 0% ,#f0f0f0 100%); 
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f0f0', endColorstr='#f0f0f0',GradientType=0 ); 
+    background-image: linear-gradient(top, #fcfcfc 0% ,#f0f0f0 100%);   
+    -webkit-box-shadow:0px 0px 2px #bababa, inset 0px 0px -2px #ffffff; 
+    -moz-box-shadow: 0px 0px 2px #bababa,  inset 0px 0px -2px #ffffff;  
+    box-shadow:0px 0px 2px #bababa, inset 0px 0px -2px #ffffff;  
+     
+    text-shadow: -2px -2px 7px #b8b512; 
+    filter: dropshadow(color=#b8b512, offx=-2, offy=-2);}
+
+    @keyframes yourAnimation{
+        0%{
+            transform: rotate(0) translateX(0) skewX(-25deg);
+            }
+        50%{
+            transform: rotate(0) scale(1.5) translateX(020%) translateY(-20%) skewX(-25deg);
+            opacity: 1;
+            }
+        99%{
+            transform: rotate(0) scale(1) translateX(0) translateY(0) skewX(0);
+            opacity: 1;
+            }
+    }
+    
+    #element{
+        animation: yourAnimation 4s 1 0s ease-in;
+    }

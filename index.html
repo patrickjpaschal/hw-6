@@ -1,5 +1,103 @@
 <!doctype html>
 <html lang="en">
+​
+<head>
+	<meta charset="utf-8">
+  <title> </title>
+  <link href="https://fonts.googleapis.com/css?family=Happy+Monkey|Montserrat&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="style.css">
+</head>
+​
+<body>
+
+    <div class="jumbotron jumbotron-fluid" id="element">
+        <div class="container">
+          <h1 class="display-3">A Giphy Search Page</h1>
+          <p class="lead" id="mainsrc">Gif Search<img src="favicon.png" id="favicon"></p>
+        </div>
+      </div>
+
+
+
+
+
+	<div id="page-container"><div id="content-wrapper">
+	<nav class="navbar navbar-light bg-light"><img src="favicon.png" id="favicon">
+	</nav>
+	<header id="head"></header>
+​
+​
+	
+    <h1 id="mainsrch">Gif Search</h1><button id="stops" type="value">stops</button>
+    
+      <textarea type="text" id="searchBox"  placeholder="Search for a gif " rows=3 cols=50></textarea>
+​
+			<div id="buttons-view"></div>
+			<input id="add-gif" class="button" type="submit" value="Search for Gifs">
+    <div id="buttons-view"></div></div>
+    <br>
+		<div id="gifs-view"></div>			
+​
+
+		<!-- <div class="container"> -->
+			
+​
+			<div id="displayGifs"></div>
+	</div>	
+	
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+		crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+		crossorigin="anonymous"></script>
+​
+	</script>
+	<script type="text/javascript" src="./javascript.js"></script>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- <!doctype html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
   <title> </title>
@@ -24,7 +122,7 @@
             </div>
             <div class="container">
                     <h1>Gif Search</h1>
-                
+                <input type="text" id="searchBox">
                     <div id="buttons-view"></div>
                 
                             
@@ -35,75 +133,14 @@
           </div>      
          </div>          
       </div>   
-                    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-                                       <script type="text/javascript" src="./javascript.js"></script>
-                     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+       
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+         <script type="text/javascript" src="./javascript.js"></script>
   </script>
 </body>
 </html>
- // Initial array of movies
-                      var movies = ["The Matrix", "The Notebook", "Mr. Nobody", "The Lion King"];
-                
-                      // Function for dumping the JSON content for each button into the div
-                      function displayMovieInfo() {
-                
-                        var movie = $(this).attr("data-name");
-                        var queryURL = "https://www.omdbapi.com/?t=" + movie + "&apikey=trilogy";
-                
-                        $.ajax({
-                          url: queryURL,
-                          method: "GET"
-                        }).then(function(response) {
-                          $("#movies-view").text(JSON.stringify(response));
-                        });
-                      }
-                
-                      // Function for displaying movie data
-                      function renderButtons() {
-                
-                        // Deleting the buttons prior to adding new movies
-                        // (this is necessary otherwise you will have repeat buttons)
-                        $("#buttons-view").empty();
-                
-                        // Looping through the array of movies
-                        for (var i = 0; i < movies.length; i++) {
-                
-                          // Then dynamically generating buttons for each movie in the array
-                          // This code $("<button>") is all jQuery needs to create the beginning and end tag. (<button></button>)
-                          var a = $("<button>");
-                          // Adding a class of movie to our button
-                          a.addClass("movie");
-                          // Adding a data-attribute
-                          a.attr("data-name", movies[i]);
-                          // Providing the initial button text
-                          a.text(movies[i]);
-                          // Adding the button to the buttons-view div
-                          $("#buttons-view").append(a);
-                        }
-                      }
-                
-                      // This function handles events where one button is clicked
-                      $("#add-movie").on("click", function(event) {
-                        event.preventDefault();
-                
-                        // This line grabs the input from the textbox
-                        var movie = $("#movie-input").val().trim();
-                
-                        // Adding the movie from the textbox to our array
-                        movies.push(movie);
-                        console.log(movies);
-                
-                        // Calling renderButtons which handles the processing of our movie array
-                        renderButtons();
-                      });
-                
-                      // Function for displaying the movie info
-                      // Using $(document).on instead of $(".movie").on to add event listeners to dynamically generated elements
-                      $(document).on("click", ".movie", displayMovieInfo);
-                
-                      // Calling the renderButtons function to display the initial buttons
-                      renderButtons();
-        
+ 
+         -->
