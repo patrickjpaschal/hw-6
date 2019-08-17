@@ -1,4 +1,5 @@
 // Create array of gif words
+
 var gifs = ["internet", "developer", "css", "coding", "computer", "aol", "website", "anonymous", "html", "technology"];
 
 // Initial render of button on page load
@@ -45,10 +46,9 @@ function renderButtons() {
   
     // Store and push user input
     
-  
 
   var gifs = $(this).attr("data-name");
-	var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + gifs + "&apikey=11q0Kp4LaudSyBb2k9XWxuv5tREZXJ0A&limit=25";
+	var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + gifs + "&apikey=11q0Kp4LaudSyBb2k9XWxuv5tREZXJ0A&limit=25";
 
 	$.ajax({
 		url: queryURL,
@@ -111,6 +111,7 @@ $(document).on("click", ".gif", displayGifs);
 
 $("#stop").click(function(){
 	window.stop()});
+
 //   }); $("img").hover(
 //     function() {
 //         $(this).attr("src", "animate1.gif");

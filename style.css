@@ -34,9 +34,12 @@
 #navbar {
     align-content: center;
 }
+/* img{padding:5px;} */
 span{
     position: absolute;
 }
+
+
 .button{text-decoration:none; text-align:center; 
     padding:0px 25px; 
     border:solid 1px #005072; 
